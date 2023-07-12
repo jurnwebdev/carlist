@@ -37,7 +37,17 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                             </button>
 
                         </div>
+                        <Image src='/hero.png' width={300} height={200} alt='Car car'></Image>
+                        <div className='w-full h-auto p-4'>
+                            {
+                                Object.entries(car).map(([key, value]) => (
+                                    <div className=' flex justify-between' key={key}>
+                                        <p>{key}</p>
+                                        <h1> {value}</h1></div>
+                                ))
+                            }
 
+                        </div>
 
                     </Dialog.Panel>
                 </div>
